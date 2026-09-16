@@ -8,7 +8,7 @@ function matches(pathname: string, prefixes: string[]) {
   return prefixes.some((p) => pathname === p || pathname.startsWith(`${p}/`));
 }
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const isApi = matches(pathname, PROTECTED_API_PREFIXES);
   const isPage = matches(pathname, PROTECTED_PAGE_PREFIXES);

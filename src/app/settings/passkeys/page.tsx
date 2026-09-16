@@ -31,6 +31,8 @@ export default function PasskeySettingsPage() {
   }, []);
 
   useEffect(() => {
+    // 마운트 시 목록을 한 번 불러온다 — 외부(서버) 상태를 읽어오는 표준적인 패턴.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     load();
   }, [load]);
 
