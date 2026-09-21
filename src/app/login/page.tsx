@@ -31,7 +31,7 @@ function LoginForm() {
         <h1 className="text-xl font-semibold text-slate-900">
           비공개 영역 로그인
         </h1>
-        <p className="mt-1 text-sm text-slate-500">
+        <p className="mt-1 text-sm text-slate-500 break-keep">
           아이디도 비밀번호도 입력하지 않습니다. 이 기기에 등록된 패스키로
           바로 증명합니다.
         </p>
