@@ -11,11 +11,13 @@ export const metadata: Metadata = {
 
 const HW1_CSS = `
 * { box-sizing: border-box; }
+body { background-color: #050507; }
 .hw1-public-page {
     background-color: #050507;
     color: #d1d5db;
     font-family: 'Consolas', 'Monaco', 'Pretendard', sans-serif;
     padding: 20px;
+    min-height: 100vh;
     line-height: 1.8;
     letter-spacing: 0.3px;
     overflow-x: hidden;
