@@ -2,6 +2,10 @@
 
 「내 소개 페이지에 패스키 달기 — 비밀번호 없이 나만 들어가기」과제 결과물.
 
+- 배포 주소: https://passkey-vault-gamma.vercel.app
+- 소스 저장소: https://github.com/gamedh823-cmd/T08
+- README: https://github.com/gamedh823-cmd/T08/blob/main/README.md
+
 - `/` : 공개 소개 페이지 (HW1 소개 페이지를 그대로 이식)
 - `/register`, `/login` : 비밀번호 없이 패스키로만 계정을 만들고 로그인
 - `/private` : 패스키로 로그인한 사람만 보이는 비공개 영역 (예시 데이터, 실제 개인정보 아님)
