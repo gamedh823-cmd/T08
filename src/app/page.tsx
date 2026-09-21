@@ -58,8 +58,9 @@ h2 { font-size: 1.4rem; margin-bottom: 20px; color: #e5e7eb; }
 
 .decrypt-btn {
     background-color: transparent; color: #3b82f6; border: 2px solid #3b82f6;
-    padding: 14px 28px; font-family: 'Pretendard', sans-serif; font-weight: 600; font-size: 1.1rem;
-    cursor: pointer; transition: all 0.3s ease; display: inline-block; margin: 15px 0 35px 0; border-radius: 6px;
+    padding: 10px 20px; font-family: 'Pretendard', sans-serif; font-weight: 600; font-size: 0.9rem;
+    cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center;
+    white-space: nowrap; box-sizing: border-box; width: 460px; max-width: 100%; margin: 15px 0 12px 0; border-radius: 6px;
 }
 .decrypt-btn:hover, .decrypt-btn:focus { background-color: rgba(59, 130, 246, 0.15); color: #93c5fd; border-color: #93c5fd; outline: none; box-shadow: 0 0 25px rgba(59, 130, 246, 0.4); }
 
@@ -88,9 +89,25 @@ h2 { font-size: 1.4rem; margin-bottom: 20px; color: #e5e7eb; }
 @keyframes blink { 50% { opacity: 0; } }
 .typewriter { border-right: 2px solid #3b82f6; white-space: nowrap; overflow: hidden; margin: 0; }
 
-.restricted-zone { margin-top: 30px; }
-.restricted-zone a { color: #34d399; }
-.restricted-zone a:hover, .restricted-zone a:focus { color: #6ee7b7; }
+.restricted-zone { margin-top: 0; }
+.restricted-zone-btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    white-space: nowrap; box-sizing: border-box; width: 460px; max-width: 100%;
+    background-color: rgba(16, 185, 129, 0.14); color: #6ee7b7; border: 2px solid #34d399;
+    padding: 10px 20px; font-family: 'Pretendard', sans-serif; font-weight: 700; font-size: 0.9rem;
+    text-decoration: none; border-radius: 6px; transition: all 0.3s ease;
+    animation: restricted-pulse 2s ease-in-out infinite;
+}
+.restricted-zone-btn:hover, .restricted-zone-btn:focus {
+    background-color: rgba(16, 185, 129, 0.28); color: #a7f3d0; border-color: #6ee7b7;
+    outline: none; box-shadow: 0 0 30px rgba(52, 211, 153, 0.6); transform: translateY(-2px);
+    animation-play-state: paused;
+}
+@keyframes restricted-pulse {
+    0%, 100% { box-shadow: 0 0 8px rgba(52, 211, 153, 0.15); }
+    50% { box-shadow: 0 0 22px rgba(52, 211, 153, 0.55); }
+}
+.restricted-zone-note { display: block; margin-top: 10px; color: #6b7280; font-size: 0.85rem; }
 
 @media (max-width: 768px) {
     .logs-grid { grid-template-columns: 1fr; }
@@ -195,9 +212,9 @@ const HW1_BODY_HTML = `
     </div>
 
     <!-- 과제 8에서 추가: 비밀번호 없이 패스키로만 열리는 비공개 영역으로 가는 문 -->
-    <div class="report-link-container restricted-zone">
-        <span class="syntax-cmd">></span> RESTRICTED_ZONE: <a href="/login">[PASSKEY_ACCESS - 비공개 영역으로 이동]</a>
-        <span style="color:#6b7280; margin-left: 10px;">// 비밀번호 없음, 등록된 패스키로만 열림</span>
+    <div class="restricted-zone">
+        <a href="/login" class="restricted-zone-btn">🔒 RESTRICTED_ZONE — PASSKEY_ACCESS</a>
+        <span class="restricted-zone-note">// 비밀번호 없음, 등록된 패스키로만 열림</span>
     </div>
 </div>
 `;
