@@ -13,7 +13,7 @@
 |---|---|
 | ![로그인](docs/screenshots/01-login.png) | ![비공개 영역](docs/screenshots/02-private-area.png) |
 
-| 패스키 관리 | 마지막 패스키 삭제 시 경고 |
+| 패스키 관리 | 마지막 패스키 삭제 후 문구 |
 |---|---|
 | ![패스키 관리](docs/screenshots/03-passkey-settings.png) | ![삭제 경고](docs/screenshots/04-passkey-deleted-warning.png) |
 
